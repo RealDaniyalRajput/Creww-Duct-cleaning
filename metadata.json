@@ -1,0 +1,6 @@
+{
+  "name": "CREWW Duct Cleaning",
+  "description": "Professional air duct, dryer vent, HVAC, and chimney cleaning services for residential and commercial properties across the USA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
