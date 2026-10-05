@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, Sun, Moon, ArrowRight, PhoneCall } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import crewwLogo from '../assets/images/creww_official_logo_1791048839644.jpg';
 
 interface HeaderProps {
   onNavigateToQuote: () => void;
@@ -45,7 +46,7 @@ export const Header: React.FC<HeaderProps> = ({
               className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-lg p-1"
             >
               <img
-                src="/IMG-20261003-WA0026.jpg"
+                src={crewwLogo}
                 alt="CREWW DUCT CLEANING"
                 referrerPolicy="no-referrer"
                 className="h-14 sm:h-16 w-auto object-contain transition-transform duration-200 group-hover:scale-105"

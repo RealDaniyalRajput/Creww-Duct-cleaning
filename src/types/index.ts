@@ -23,14 +23,6 @@ export interface QuoteFormData {
   promoApplied?: boolean;
 }
 
-export interface CallbackFormData {
-  fullName: string;
-  phone: string;
-  preferredDate: string;
-  preferredTime: string;
-  additionalDetails?: string;
-}
-
 export interface BookingFormData {
   fullName: string;
   phone: string;

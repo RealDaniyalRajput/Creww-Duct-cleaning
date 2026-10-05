@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, PhoneCall, CheckCircle2 } from 'lucide-react';
+import heroResidentialDuctImg from '../assets/images/user_img_residential_duct_1791051375504.jpg';
 
 interface HeroProps {
   onQuoteClick: () => void;
@@ -69,7 +70,7 @@ export const Hero: React.FC<HeroProps> = ({ onQuoteClick, onCallbackClick }) => 
           <div className="lg:col-span-5 relative w-full">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200/80 dark:border-slate-700/80 bg-slate-900 group">
               <img
-                src="/src/assets/images/user_img_residential_duct_1791051375504.jpg"
+                src={heroResidentialDuctImg}
                 alt="CREWW Duct Cleaning technician operating professional negative-air suction equipment at residential air return duct"
                 referrerPolicy="no-referrer"
                 className="w-full h-auto aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] object-cover object-center transform group-hover:scale-102 transition-transform duration-500"

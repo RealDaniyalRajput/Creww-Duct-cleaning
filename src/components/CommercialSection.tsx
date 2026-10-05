@@ -1,5 +1,6 @@
 import React from 'react';
 import { Building2, ArrowRight, ShieldCheck, CheckCircle2, Factory, Briefcase, Hotel, Store } from 'lucide-react';
+import cleanCommercialTechImg from '../assets/images/clean_commercial_technician_1791051438169.jpg';
 
 interface CommercialSectionProps {
   onRequestCommercialQuote: () => void;
@@ -56,7 +57,7 @@ export const CommercialSection: React.FC<CommercialSectionProps> = ({
           <div className="lg:col-span-6">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 bg-slate-900">
               <img
-                src="/src/assets/images/clean_commercial_technician_1791051438169.jpg"
+                src={cleanCommercialTechImg}
                 alt="CREWW technician performing commercial ventilation ductwork cleaning inside corporate office building"
                 referrerPolicy="no-referrer"
                 className="w-full h-auto aspect-[16/10] object-cover object-center"

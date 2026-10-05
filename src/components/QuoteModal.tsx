@@ -4,6 +4,7 @@ import { ServiceType, PropertyType, QuoteFormData } from '../types';
 import { submitQuote } from '../services/api';
 import { DatePicker } from './ui/DatePicker';
 import { TimePicker } from './ui/TimePicker';
+import crewwLogo from '../assets/images/creww_official_logo_1791048839644.jpg';
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -142,7 +143,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
         {/* Modal Header */}
         <div className="flex items-center gap-3 mb-4">
           <img
-            src="/IMG-20261003-WA0026.jpg"
+            src={crewwLogo}
             alt="CREWW DUCT CLEANING"
             referrerPolicy="no-referrer"
             className="w-10 h-10 rounded-full object-cover"

@@ -20,7 +20,7 @@ export const WhyChooseSection: React.FC = () => {
     },
     {
       title: 'Convenient Scheduling',
-      desc: 'Select preferred dates and times directly online or request a direct callback to coordinate with your daily routine.',
+      desc: 'Select preferred dates and times directly online to coordinate easily with your daily routine.',
       icon: Calendar,
     },
     {

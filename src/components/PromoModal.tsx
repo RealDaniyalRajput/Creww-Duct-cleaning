@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { X, Sparkles, ArrowRight, Tag, Clock } from 'lucide-react';
+import crewwLogo from '../assets/images/creww_official_logo_1791048839644.jpg';
 
 interface PromoModalProps {
   onClaimPromo: () => void;
@@ -95,7 +96,7 @@ export const PromoModal: React.FC<PromoModalProps> = ({ onClaimPromo }) => {
         {/* Brand Kicker */}
         <div className="flex items-center gap-2 mb-4">
           <img
-            src="/IMG-20261003-WA0026.jpg"
+            src={crewwLogo}
             alt="CREWW DUCT CLEANING"
             referrerPolicy="no-referrer"
             className="w-8 h-8 rounded-full object-cover"

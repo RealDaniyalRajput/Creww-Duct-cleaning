@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X, Send, ArrowRight, PhoneCall } from 'lucide-react';
 import { ServiceType } from '../types';
+import crewwLogo from '../assets/images/creww_official_logo_1791048839644.jpg';
 
 interface Message {
   id: string;
@@ -261,7 +262,7 @@ export const AskCrewwChatbot: React.FC<AskCrewwChatbotProps> = ({
           <div className="p-4 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800">
             <div className="flex items-center gap-3">
               <img
-                src="/IMG-20261003-WA0026.jpg"
+                src={crewwLogo}
                 alt="CREWW Logo"
                 referrerPolicy="no-referrer"
                 className="w-8 h-8 rounded-full object-cover"

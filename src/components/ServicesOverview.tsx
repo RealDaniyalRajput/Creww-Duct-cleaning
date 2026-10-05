@@ -1,6 +1,10 @@
 import React from 'react';
 import { Wind, Flame, Fan, Layers, ArrowRight, Info } from 'lucide-react';
 import { ServiceType } from '../types';
+import basementDuctImg from '../assets/images/user_img_basement_duct_1791051389710.jpg';
+import dryerVentImg from '../assets/images/user_img_dryer_vent_1791051405144.jpg';
+import hvacCondenserImg from '../assets/images/user_img_hvac_condenser_1791051415912.jpg';
+import cleanChimneyImg from '../assets/images/clean_chimney_technician_1791051427800.jpg';
 
 interface ServicesOverviewProps {
   onBookService: (service: ServiceType) => void;
@@ -24,7 +28,7 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({
       title: 'AIR DUCT CLEANING',
       description:
         'Comprehensive supply and return duct cleaning using powerful negative-air vacuums and high-speed rotary brush systems to clear accumulated dust and debris.',
-      image: '/src/assets/images/user_img_basement_duct_1791051389710.jpg',
+      image: basementDuctImg,
       icon: Wind,
       highlights: ['Full Supply & Return Runs', 'Rotary Agitation Equipment', 'Residential & Commercial'],
     },
@@ -33,7 +37,7 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({
       title: 'DRYER VENT CLEANING',
       description:
         'Thorough lint extraction and booster vent line clearing from dryer backplate to exterior exhaust termination to restore proper airflow and drying efficiency.',
-      image: '/src/assets/images/user_img_dryer_vent_1791051405144.jpg',
+      image: dryerVentImg,
       icon: Flame,
       highlights: ['Deep Lint & Clog Extraction', 'Airflow Optimization', 'Exhaust Hood Inspection'],
     },
@@ -42,7 +46,7 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({
       title: 'HVAC CLEANING',
       description:
         'Detailed cleaning of indoor air handler components including evaporator coils, blower fan assemblies, drain pans, and cabinet surfaces.',
-      image: '/src/assets/images/user_img_hvac_condenser_1791051415912.jpg',
+      image: hvacCondenserImg,
       icon: Fan,
       highlights: ['Evaporator Coil Cleaning', 'Blower Motor Decontamination', 'Drain Pan Maintenance'],
     },
@@ -51,7 +55,7 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({
       title: 'CHIMNEY CLEANING',
       description:
         'Specialized mechanical flue sweeping, creosote removal, and smoke chamber clearing using dedicated steel sweep rods and HEPA-filtered containment.',
-      image: '/src/assets/images/clean_chimney_technician_1791051427800.jpg',
+      image: cleanChimneyImg,
       icon: Layers,
       highlights: ['Flue & Chimney Sweep', 'Creosote & Soot Removal', 'Clean Hearth Dust Containment'],
     },

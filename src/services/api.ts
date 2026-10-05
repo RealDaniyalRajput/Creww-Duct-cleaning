@@ -1,5 +1,5 @@
 import emailjs from '@emailjs/browser';
-import { QuoteFormData, CallbackFormData, BookingFormData } from '../types';
+import { QuoteFormData, BookingFormData } from '../types';
 import { EMAILJS_CONFIG } from '../config/emailjs';
 
 export interface ApiResponse<T = any> {
@@ -250,18 +250,4 @@ export async function submitBooking(data: BookingFormData): Promise<ApiResponse>
       error: STANDARD_ERROR_MESSAGE,
     };
   }
-}
-
-/**
- * 3. CALLBACK FORM LOCAL HANDLER
- * (Callback EmailJS is excluded from this implementation and will be connected separately later.)
- */
-export async function submitCallback(_data: CallbackFormData): Promise<ApiResponse> {
-  // Pure client-side simulation preserving existing UI until separate Callback EmailJS integration
-  await new Promise((resolve) => setTimeout(resolve, 400));
-  return {
-    success: true,
-    message: 'Thank you! Your callback request has been received. Our team will review your request and contact you at your preferred time.',
-    inquiryId: `C-${Date.now().toString().slice(-6)}`,
-  };
 }

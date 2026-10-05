@@ -25,7 +25,7 @@ export const AboutSection: React.FC = () => {
               At <strong className="text-slate-900 dark:text-white">CREWW Duct Cleaning</strong>, our focus is simple: provide thorough, honest, and high-quality mechanical cleaning for residential and commercial heating, cooling, ventilation, and chimney systems.
             </p>
             <p>
-              We approach every property with a customer-focused mindset. From the moment you request an estimate or callback, we prioritize clear communication, straightforward scheduling, and respect for your property. Our technicians utilize specialized rotary agitation tools, high-capacity negative-air collection vacuums, and clean dust containment practices to complete every job properly.
+              We approach every property with a customer-focused mindset. From the moment you request an estimate or book a service, we prioritize clear communication, straightforward scheduling, and respect for your property. Our technicians utilize specialized rotary agitation tools, high-capacity negative-air collection vacuums, and clean dust containment practices to complete every job properly.
             </p>
             <p>
               Whether clearing household dryer vent lint, deep cleaning supply and return duct runs, servicing central HVAC components, or sweeping fireplace flues, CREWW Duct Cleaning brings the focus, equipment, and dedication needed to keep systems clean.
@@ -47,7 +47,7 @@ export const AboutSection: React.FC = () => {
               <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800/80">
                 <Clock className="w-6 h-6 text-blue-600 dark:text-blue-400 mx-auto mb-2" />
                 <h3 className="font-bold text-slate-900 dark:text-white text-sm">Convenient Scheduling</h3>
-                <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Direct callback and flexible dates</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Prompt coordination and flexible dates</p>
               </div>
             </div>
 

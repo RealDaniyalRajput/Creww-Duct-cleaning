@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Instagram, Facebook } from 'lucide-react';
 import { ServiceType } from '../types';
+import crewwLogo from '../assets/images/creww_official_logo_1791048839644.jpg';
 
 interface FooterProps {
   onSelectService: (service: ServiceType) => void;
@@ -42,7 +43,7 @@ export const Footer: React.FC<FooterProps> = ({
               className="flex items-center gap-3 mb-3.5 group"
             >
               <img
-                src="/IMG-20261003-WA0026.jpg"
+                src={crewwLogo}
                 alt="CREWW DUCT CLEANING"
                 referrerPolicy="no-referrer"
                 className="h-12 w-auto object-contain rounded-full transition-transform group-hover:scale-105"

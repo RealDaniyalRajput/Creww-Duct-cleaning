@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
 import { X, CheckCircle2, ArrowRight, ShieldCheck, Wrench, Sparkles, Wind, Flame, Fan, Layers } from 'lucide-react';
 import { ServiceType } from '../types';
+import basementDuctImg from '../assets/images/user_img_basement_duct_1791051389710.jpg';
+import dryerVentImg from '../assets/images/user_img_dryer_vent_1791051405144.jpg';
+import hvacCondenserImg from '../assets/images/user_img_hvac_condenser_1791051415912.jpg';
+import cleanChimneyImg from '../assets/images/clean_chimney_technician_1791051427800.jpg';
+import cleanCommercialImg from '../assets/images/clean_commercial_technician_1791051438169.jpg';
 
 interface ServiceDetailsModalProps {
   isOpen: boolean;
@@ -24,7 +29,7 @@ const SERVICE_INFO: Record<ServiceType, ServiceData> = {
   'Air Duct Cleaning': {
     title: 'AIR DUCT CLEANING',
     tagline: 'Comprehensive Ventilation & Trunk Line Cleaning',
-    image: '/src/assets/images/user_img_basement_duct_1791051389710.jpg',
+    image: basementDuctImg,
     icon: Wind,
     intro:
       'Over time, heating and cooling ductwork accumulates household dust, construction residue, and airborne particulates. CREWW Duct Cleaning utilizes commercial-grade negative-air vacuum collectors paired with motorized rotary scrub brushes to systematically agitate and extract trapped matter from every supply register, return grille, and main trunk line.',
@@ -45,7 +50,7 @@ const SERVICE_INFO: Record<ServiceType, ServiceData> = {
   'Dryer Vent Cleaning': {
     title: 'DRYER VENT CLEANING',
     tagline: 'Deep Lint Extraction & Airflow Restoration',
-    image: '/src/assets/images/user_img_dryer_vent_1791051405144.jpg',
+    image: dryerVentImg,
     icon: Flame,
     intro:
       'Dryer vent exhaust lines accumulate combustible lint fluff and moisture over repeated laundry cycles, restricting exhaust airflow, extending drying times, and straining internal heating elements. CREWW Duct Cleaning provides mechanical rotary brush extraction from the appliance transition collar all the way through the exterior exhaust hood.',
@@ -66,7 +71,7 @@ const SERVICE_INFO: Record<ServiceType, ServiceData> = {
   'HVAC Cleaning': {
     title: 'HVAC CLEANING',
     tagline: 'Evaporator Coil & Blower Motor Care',
-    image: '/src/assets/images/user_img_hvac_condenser_1791051415912.jpg',
+    image: hvacCondenserImg,
     icon: Fan,
     intro:
       'The internal mechanical components of your heating and air conditioning system—including evaporator cooling coils, blower wheels, and internal housing chambers—collect fine particulate matter that standard filters miss. CREWW Duct Cleaning provides detailed physical and pneumatic cleaning of these critical mechanical components to support smooth system operation.',
@@ -87,7 +92,7 @@ const SERVICE_INFO: Record<ServiceType, ServiceData> = {
   'Chimney Cleaning': {
     title: 'CHIMNEY CLEANING',
     tagline: 'Mechanical Flue Sweeping & HEPA Containment',
-    image: '/src/assets/images/clean_chimney_technician_1791051427800.jpg',
+    image: cleanChimneyImg,
     icon: Layers,
     intro:
       'Burning wood produces flammable creosote, soot, and glaze deposits that adhere to flue walls, restricting draft and introducing chimney hazard conditions. CREWW Duct Cleaning provides specialized mechanical flue sweeping and smoke chamber clearing using dedicated steel sweep rods and HEPA-filtered dust containment to keep your living room spotless.',
@@ -108,7 +113,7 @@ const SERVICE_INFO: Record<ServiceType, ServiceData> = {
   'Other': {
     title: 'CUSTOM & COMMERCIAL VENTILATION',
     tagline: 'Specialized Air System Solutions',
-    image: '/src/assets/images/clean_commercial_technician_1791051438169.jpg',
+    image: cleanCommercialImg,
     icon: Wind,
     intro:
       'CREWW Duct Cleaning handles specialized multi-system cleaning projects, facility ventilation corridors, commercial exhaust hoods, and custom commercial properties. Our technicians coordinate custom negative-air containment and mechanical agitation tailored to your property.',

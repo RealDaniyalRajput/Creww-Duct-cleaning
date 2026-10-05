@@ -1,6 +1,7 @@
 import React from 'react';
 import { Home, ArrowRight, CheckCircle2, Wind, Flame, Fan, Layers } from 'lucide-react';
 import { ServiceType } from '../types';
+import residentialDuctImg from '../assets/images/user_img_residential_duct_1791051375504.jpg';
 
 interface ResidentialSectionProps {
   onQuoteClick: () => void;
@@ -97,7 +98,7 @@ export const ResidentialSection: React.FC<ResidentialSectionProps> = ({
             <div className="lg:col-span-6 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 bg-slate-900">
                 <img
-                  src="/src/assets/images/user_img_residential_duct_1791051375504.jpg"
+                  src={residentialDuctImg}
                   alt="CREWW technician cleaning residential wall return air duct with commercial negative-air vacuum system in modern home"
                   referrerPolicy="no-referrer"
                   className="w-full h-auto aspect-[16/10] object-cover object-center"

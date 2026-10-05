@@ -1,6 +1,14 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { Wind, Flame, Fan, Layers, Sliders, ArrowLeftRight } from 'lucide-react';
 import { ServiceType } from '../types';
+import airDuctBeforeImg from '../assets/images/air_duct_before_1791049717457.jpg';
+import airDuctAfterImg from '../assets/images/air_duct_after_1791049729790.jpg';
+import dryerVentBeforeImg from '../assets/images/dryer_vent_before_1791049742373.jpg';
+import dryerVentAfterImg from '../assets/images/dryer_vent_after_1791049752417.jpg';
+import hvacCoilBeforeImg from '../assets/images/hvac_coil_before_1791049762628.jpg';
+import hvacCoilAfterImg from '../assets/images/hvac_coil_after_1791049773444.jpg';
+import chimneyBeforeImg from '../assets/images/chimney_before_1791049783371.jpg';
+import chimneyAfterImg from '../assets/images/chimney_after_1791049796143.jpg';
 
 interface ComparisonItem {
   id: string;
@@ -28,8 +36,8 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({ onBookSe
       category: 'Ventilation System',
       description:
         'Supply ductwork heavily coated with dust and lint buildup before motorized brush agitation and negative-air vacuum extraction versus the spotless galvanized duct interior after service.',
-      beforeImage: '/src/assets/images/air_duct_before_1791049717457.jpg',
-      afterImage: '/src/assets/images/air_duct_after_1791049729790.jpg',
+      beforeImage: airDuctBeforeImg,
+      afterImage: airDuctAfterImg,
       beforeAlt: 'Air duct interior heavily coated with dust before cleaning',
       afterAlt: 'Air duct interior completely clean and cleared of dust after cleaning',
       icon: Wind,
@@ -41,8 +49,8 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({ onBookSe
       category: 'Exhaust Line',
       description:
         'Exhaust line severely choked with compacted laundry lint restricting airflow before snake-brush clearing versus the unobstructed pipe opening after thorough lint extraction.',
-      beforeImage: '/src/assets/images/dryer_vent_before_1791049742373.jpg',
-      afterImage: '/src/assets/images/dryer_vent_after_1791049752417.jpg',
+      beforeImage: dryerVentBeforeImg,
+      afterImage: dryerVentAfterImg,
       beforeAlt: 'Dryer vent pipe clogged with thick lint before cleaning',
       afterAlt: 'Dryer vent exhaust completely clear of lint after cleaning',
       icon: Flame,
@@ -54,8 +62,8 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({ onBookSe
       category: 'Indoor Air Handler',
       description:
         'Evaporator A-coil aluminum fins caked with sticky dust layers that impede heat exchange before cleaning versus restored, gleaming clean cooling fins after precision service.',
-      beforeImage: '/src/assets/images/hvac_coil_before_1791049762628.jpg',
-      afterImage: '/src/assets/images/hvac_coil_after_1791049773444.jpg',
+      beforeImage: hvacCoilBeforeImg,
+      afterImage: hvacCoilAfterImg,
       beforeAlt: 'HVAC evaporator coils clogged with grime and dust before cleaning',
       afterAlt: 'HVAC evaporator coils gleaming clean after precision cleaning',
       icon: Fan,
@@ -67,8 +75,8 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({ onBookSe
       category: 'Masonry Flue',
       description:
         'Fireplace flue liner coated with hazardous creosote and soot buildup before wire brush mechanical sweeping versus clear, brushed masonry brickwork after sweeping.',
-      beforeImage: '/src/assets/images/chimney_before_1791049783371.jpg',
-      afterImage: '/src/assets/images/chimney_after_1791049796143.jpg',
+      beforeImage: chimneyBeforeImg,
+      afterImage: chimneyAfterImg,
       beforeAlt: 'Fireplace chimney flue coated with dark soot before sweeping',
       afterAlt: 'Fireplace chimney flue clear and clean after sweeping',
       icon: Layers,

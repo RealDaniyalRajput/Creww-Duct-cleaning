@@ -1,14 +1,14 @@
 import React from 'react';
-import { Mail, MapPin, Instagram, Facebook, ArrowUpRight, Send, PhoneCall } from 'lucide-react';
+import { Mail, MapPin, Instagram, Facebook, ArrowUpRight } from 'lucide-react';
 
 interface ContactSectionProps {
   onQuoteClick: () => void;
-  onCallbackClick: () => void;
+  onBookClick: () => void;
 }
 
 export const ContactSection: React.FC<ContactSectionProps> = ({
   onQuoteClick,
-  onCallbackClick,
+  onBookClick,
 }) => {
   return (
     <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 transition-colors duration-200">
@@ -111,21 +111,21 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
               Ready to schedule or need a fast estimate?
             </h3>
             <p className="text-blue-100 text-sm sm:text-base mt-1">
-              Submit your property details or pick a callback window today.
+              Submit your property details or book your service appointment today.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3 flex-shrink-0 w-full sm:w-auto">
             <button
               onClick={onQuoteClick}
-              className="w-full sm:w-auto px-5 py-3 bg-white hover:bg-slate-100 text-blue-700 font-bold text-sm rounded-xl shadow-sm transition-colors text-center"
+              className="w-full sm:w-auto px-5 py-3 bg-white hover:bg-slate-100 text-blue-700 font-bold text-sm rounded-xl shadow-sm transition-colors text-center cursor-pointer"
             >
               Get a Free Quote
             </button>
             <button
-              onClick={onCallbackClick}
-              className="w-full sm:w-auto px-5 py-3 bg-blue-700 hover:bg-blue-800 border border-blue-400 text-white font-bold text-sm rounded-xl shadow-sm transition-colors text-center"
+              onClick={onBookClick}
+              className="w-full sm:w-auto px-5 py-3 bg-blue-700 hover:bg-blue-800 border border-blue-400 text-white font-bold text-sm rounded-xl shadow-sm transition-colors text-center cursor-pointer"
             >
-              Get a Callback
+              Book Your Service
             </button>
           </div>
         </div>
