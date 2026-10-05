@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { Menu, X, Sun, Moon, ArrowRight, PhoneCall } from 'lucide-react';
+import { Menu, X, Sun, Moon, ArrowRight } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import crewwLogo from '../assets/images/creww_official_logo_1791048839644.jpg';
 
 interface HeaderProps {
   onNavigateToQuote: () => void;
-  onNavigateToCallback: () => void;
+  onBookService?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   onNavigateToQuote,
-  onNavigateToCallback,
+  onBookService,
 }) => {
   const { theme, toggleTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -164,16 +164,18 @@ export const Header: React.FC<HeaderProps> = ({
               <ArrowRight className="w-4 h-4" />
             </button>
 
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onNavigateToCallback();
-              }}
-              className="w-full flex items-center justify-center gap-2 py-3 px-4 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 font-semibold rounded-lg text-sm transition-colors"
-            >
-              <PhoneCall className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-              <span>GET A CALLBACK</span>
-            </button>
+            {onBookService && (
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onBookService();
+                }}
+                className="w-full flex items-center justify-center gap-2 py-3 px-4 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 font-semibold rounded-lg text-sm transition-colors cursor-pointer"
+              >
+                <span>BOOK YOUR SERVICE</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            )}
           </div>
         </div>
       )}

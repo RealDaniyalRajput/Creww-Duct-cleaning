@@ -72,7 +72,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({ isOpen, 
               2. Information You Provide
             </h4>
             <p className="mb-2">
-              When you submit a quote request, booking request, or callback request via our forms, we collect:
+              When you submit a quote request or booking request via our forms, we collect:
             </p>
             <ul className="list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-400">
               <li>Full Name</li>

@@ -1,13 +1,13 @@
 import React from 'react';
-import { ArrowRight, PhoneCall, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import heroResidentialDuctImg from '../assets/images/user_img_residential_duct_1791051375504.jpg';
 
 interface HeroProps {
   onQuoteClick: () => void;
-  onCallbackClick: () => void;
+  onBookClick: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onQuoteClick, onCallbackClick }) => {
+export const Hero: React.FC<HeroProps> = ({ onQuoteClick, onBookClick }) => {
   return (
     <section className="relative overflow-hidden bg-slate-50 dark:bg-slate-900/60 py-12 sm:py-16 lg:py-24 border-b border-slate-200 dark:border-slate-800 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,11 +43,11 @@ export const Hero: React.FC<HeroProps> = ({ onQuoteClick, onCallbackClick }) => 
               </button>
 
               <button
-                onClick={onCallbackClick}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 active:scale-[0.98] border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-100 font-semibold text-base rounded-lg shadow-sm transition-all duration-150"
+                onClick={onBookClick}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 active:scale-[0.98] border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-100 font-semibold text-base rounded-lg shadow-sm transition-all duration-150 cursor-pointer"
               >
-                <PhoneCall className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                <span>GET A CALLBACK</span>
+                <span>BOOK YOUR SERVICE</span>
+                <ArrowRight className="w-5 h-5 text-blue-600 dark:text-blue-400" />
               </button>
             </div>
 

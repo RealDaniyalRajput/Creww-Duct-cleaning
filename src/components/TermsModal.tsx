@@ -63,7 +63,7 @@ export const TermsModal: React.FC<TermsModalProps> = ({ isOpen, onClose }) => {
               1. Acceptance of Terms
             </h4>
             <p>
-              By accessing the website of CREWW DUCT CLEANING or submitting a quote, booking, or callback inquiry, you agree to comply with and be bound by these Terms & Conditions. If you do not agree to these terms, please refrain from using the site or submitting requests.
+              By accessing the website of CREWW DUCT CLEANING or submitting a quote or booking inquiry, you agree to comply with and be bound by these Terms & Conditions. If you do not agree to these terms, please refrain from using the site or submitting requests.
             </p>
           </section>
 

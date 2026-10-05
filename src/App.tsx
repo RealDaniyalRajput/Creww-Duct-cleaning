@@ -11,14 +11,12 @@ import { WhyChooseSection } from './components/WhyChooseSection';
 import { HowItWorks } from './components/HowItWorks';
 import { BeforeAfterSection } from './components/BeforeAfterSection';
 import { QuoteSection } from './components/QuoteSection';
-import { CallbackSection } from './components/CallbackSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { BackToTop } from './components/BackToTop';
 import { PromoModal } from './components/PromoModal';
 import { QuoteModal } from './components/QuoteModal';
 import { BookingModal } from './components/BookingModal';
-import { CallbackModal } from './components/CallbackModal';
 import { ServiceDetailsModal } from './components/ServiceDetailsModal';
 import { PrivacyPolicyModal } from './components/PrivacyPolicyModal';
 import { TermsModal } from './components/TermsModal';
@@ -43,8 +41,6 @@ export default function App() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [bookingModalService, setBookingModalService] = useState<ServiceType>('Air Duct Cleaning');
 
-  const [isCallbackModalOpen, setIsCallbackModalOpen] = useState(false);
-
   // Service Details Modal State
   const [isServiceDetailsOpen, setIsServiceDetailsOpen] = useState(false);
   const [selectedDetailService, setSelectedDetailService] = useState<ServiceType | null>(null);
@@ -57,7 +53,6 @@ export default function App() {
   const isAnyModalOpen =
     isQuoteModalOpen ||
     isBookingModalOpen ||
-    isCallbackModalOpen ||
     isServiceDetailsOpen ||
     isPrivacyPolicyOpen ||
     isTermsOpen;
@@ -73,10 +68,6 @@ export default function App() {
   const openBookingModal = (service: ServiceType = 'Air Duct Cleaning') => {
     setBookingModalService(service);
     setIsBookingModalOpen(true);
-  };
-
-  const openCallbackModal = () => {
-    setIsCallbackModalOpen(true);
   };
 
   const openServiceDetails = (service: ServiceType) => {
@@ -96,15 +87,15 @@ export default function App() {
         {/* Header (Non-sticky as strictly required; buttons open modals) */}
         <Header
           onNavigateToQuote={() => openQuoteModal()}
-          onNavigateToCallback={openCallbackModal}
+          onBookService={() => openBookingModal()}
         />
 
         {/* Main Content Area */}
         <main>
-          {/* Hero Section (Buttons open Quote and Callback modals) */}
+          {/* Hero Section (Buttons open Quote and Booking modals) */}
           <Hero
             onQuoteClick={() => openQuoteModal()}
-            onCallbackClick={openCallbackModal}
+            onBookClick={() => openBookingModal()}
           />
 
           {/* Trust Strip */}
@@ -148,13 +139,10 @@ export default function App() {
             promoApplied={promoApplied}
           />
 
-          {/* In-Page Callback Section */}
-          <CallbackSection />
-
-          {/* Contact Section (Buttons open Quote and Callback modals) */}
+          {/* Contact Section (Buttons open Quote and Booking modals) */}
           <ContactSection
             onQuoteClick={() => openQuoteModal()}
-            onCallbackClick={openCallbackModal}
+            onBookClick={() => openBookingModal()}
           />
         </main>
 
@@ -162,7 +150,6 @@ export default function App() {
         <Footer
           onSelectService={(service) => openBookingModal(service)}
           onNavigateToQuote={() => openQuoteModal()}
-          onNavigateToCallback={openCallbackModal}
           onOpenPrivacyPolicy={() => setIsPrivacyPolicyOpen(true)}
           onOpenTerms={() => setIsTermsOpen(true)}
         />
@@ -177,7 +164,6 @@ export default function App() {
         <AskCrewwChatbot
           onOpenBooking={openBookingModal}
           onNavigateToQuote={() => openQuoteModal()}
-          onNavigateToCallback={openCallbackModal}
           onQuoteClick={() => openQuoteModal()}
           isModalOpen={isAnyModalOpen}
           isNearFooter={isNearFooter}
@@ -208,12 +194,6 @@ export default function App() {
           isOpen={isBookingModalOpen}
           onClose={() => setIsBookingModalOpen(false)}
           initialService={bookingModalService}
-        />
-
-        {/* Request a Callback Modal Popup */}
-        <CallbackModal
-          isOpen={isCallbackModalOpen}
-          onClose={() => setIsCallbackModalOpen(false)}
         />
 
         {/* Privacy Policy Modal Overlay */}

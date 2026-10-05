@@ -6,7 +6,7 @@ export const HowItWorks: React.FC = () => {
     {
       num: '01',
       title: 'REQUEST A QUOTE',
-      desc: 'Submit your property details and service needs online or request a direct phone callback.',
+      desc: 'Submit your property details and service needs online to receive your personalized estimate.',
       icon: FileEdit,
     },
     {

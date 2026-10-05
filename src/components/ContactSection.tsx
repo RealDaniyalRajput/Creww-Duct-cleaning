@@ -111,7 +111,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
               Ready to schedule or need a fast estimate?
             </h3>
             <p className="text-blue-100 text-sm sm:text-base mt-1">
-              Submit your property details or book your service appointment today.
+              Submit your property details or book your preferred service date today.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3 flex-shrink-0 w-full sm:w-auto">

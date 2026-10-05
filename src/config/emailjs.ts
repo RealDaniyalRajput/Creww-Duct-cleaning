@@ -2,7 +2,7 @@
  * CREWW DUCT CLEANING
  * Centralized EmailJS Configuration
  * 
- * Configured for Quote and Booking forms.
+ * Configured strictly for Quote and Booking forms.
  */
 export const EMAILJS_CONFIG = {
   // Official Public Key provided

@@ -6,7 +6,6 @@ import crewwLogo from '../assets/images/creww_official_logo_1791048839644.jpg';
 interface FooterProps {
   onSelectService: (service: ServiceType) => void;
   onNavigateToQuote: () => void;
-  onNavigateToCallback: () => void;
   onOpenPrivacyPolicy: () => void;
   onOpenTerms: () => void;
 }
@@ -14,7 +13,6 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({
   onSelectService,
   onNavigateToQuote,
-  onNavigateToCallback,
   onOpenPrivacyPolicy,
   onOpenTerms,
 }) => {
@@ -158,10 +156,10 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
-                  onClick={onNavigateToCallback}
+                  onClick={() => onSelectService('Air Duct Cleaning')}
                   className="text-slate-400 hover:text-blue-400 transition-colors cursor-pointer text-left font-medium"
                 >
-                  Request a Callback
+                  Book Your Service
                 </button>
               </li>
             </ul>

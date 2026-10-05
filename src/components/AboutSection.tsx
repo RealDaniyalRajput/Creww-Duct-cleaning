@@ -47,7 +47,7 @@ export const AboutSection: React.FC = () => {
               <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800/80">
                 <Clock className="w-6 h-6 text-blue-600 dark:text-blue-400 mx-auto mb-2" />
                 <h3 className="font-bold text-slate-900 dark:text-white text-sm">Convenient Scheduling</h3>
-                <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Prompt coordination and flexible dates</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Online booking and flexible dates</p>
               </div>
             </div>
 
