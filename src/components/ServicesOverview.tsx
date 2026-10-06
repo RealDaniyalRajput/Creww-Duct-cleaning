@@ -20,61 +20,66 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({
     title: string;
     description: string;
     image: string;
+    alt: string;
     icon: React.ElementType;
     highlights: string[];
   }[] = [
     {
       id: 'Air Duct Cleaning',
-      title: 'AIR DUCT CLEANING',
+      title: 'Professional Air Duct Cleaning',
       description:
-        'Comprehensive supply and return duct cleaning using powerful negative-air vacuums and high-speed rotary brush systems to clear accumulated dust and debris.',
+        'Comprehensive supply and return duct cleaning following NADCA standards using powerful negative-air vacuums and high-speed rotary brush systems to clear accumulated dust and debris.',
       image: basementDuctImg,
+      alt: 'NADCA certified professional air duct cleaning service with negative-air agitation',
       icon: Wind,
       highlights: ['Full Supply & Return Runs', 'Rotary Agitation Equipment', 'Residential & Commercial'],
     },
     {
       id: 'Dryer Vent Cleaning',
-      title: 'DRYER VENT CLEANING',
+      title: 'Professional Dryer Vent Cleaning',
       description:
-        'Thorough lint extraction and booster vent line clearing from dryer backplate to exterior exhaust termination to restore proper airflow and drying efficiency.',
+        'Thorough lint extraction and booster vent line clearing from dryer backplate to exterior exhaust termination to restore proper airflow velocity and drying efficiency.',
       image: dryerVentImg,
+      alt: 'Professional dryer vent cleaning and combustible lint clog removal service',
       icon: Flame,
       highlights: ['Deep Lint & Clog Extraction', 'Airflow Optimization', 'Exhaust Hood Inspection'],
     },
     {
       id: 'HVAC Cleaning',
-      title: 'HVAC CLEANING',
+      title: 'Professional HVAC Cleaning',
       description:
-        'Detailed cleaning of indoor air handler components including evaporator coils, blower fan assemblies, drain pans, and cabinet surfaces.',
+        'Detailed cleaning of indoor air handler components including evaporator cooling coils, blower fan assemblies, drain pans, and cabinet surfaces.',
       image: hvacCondenserImg,
+      alt: 'Professional HVAC cleaning and evaporator coil maintenance service',
       icon: Fan,
       highlights: ['Evaporator Coil Cleaning', 'Blower Motor Decontamination', 'Drain Pan Maintenance'],
     },
     {
       id: 'Chimney Cleaning',
-      title: 'CHIMNEY CLEANING',
+      title: 'Professional Chimney Cleaning',
       description:
-        'Specialized mechanical flue sweeping, creosote removal, and smoke chamber clearing using dedicated steel sweep rods and HEPA-filtered containment.',
+        'Specialized mechanical flue sweeping, creosote removal, and smoke chamber clearing using dedicated steel sweep rods and HEPA-filtered dust containment.',
       image: cleanChimneyImg,
+      alt: 'Professional chimney cleaning and fireplace flue sweeping with HEPA containment',
       icon: Layers,
       highlights: ['Flue & Chimney Sweep', 'Creosote & Soot Removal', 'Clean Hearth Dust Containment'],
     },
   ];
 
   return (
-    <section id="services" className="py-14 sm:py-18 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 transition-colors duration-200">
+    <section id="services" className="py-14 sm:py-18 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 transition-colors duration-200 scroll-mt-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
           <span className="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
-            Professional Solutions
+            NADCA Certified Standards
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1 mb-2">
-            Our Services
+            Professional Cleaning Services
           </h2>
           <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300">
-            Precision cleaning services engineered for residential and commercial properties.
+            Precision cleaning services engineered for residential and commercial ventilation systems across the USA.
           </p>
         </div>
 
@@ -91,7 +96,11 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900">
                   <img
                     src={service.image}
-                    alt={service.title}
+                    alt={service.alt}
+                    loading="lazy"
+                    decoding="async"
+                    width={600}
+                    height={450}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                   />

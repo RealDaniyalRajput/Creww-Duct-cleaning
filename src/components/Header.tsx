@@ -16,12 +16,12 @@ export const Header: React.FC<HeaderProps> = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '#top' },
+    { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
-    { name: 'Before & After', href: '#before-after' },
     { name: 'Residential', href: '#residential' },
     { name: 'Commercial', href: '#commercial' },
     { name: 'About', href: '#about' },
+    { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -42,7 +42,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Logo Area */}
           <div className="flex items-center">
             <a
-              href="#top"
+              href="#home"
               className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-lg p-1"
             >
               <img

@@ -8,9 +8,11 @@ import { ResidentialSection } from './components/ResidentialSection';
 import { CommercialSection } from './components/CommercialSection';
 import { AboutSection } from './components/AboutSection';
 import { WhyChooseSection } from './components/WhyChooseSection';
+import { CertificationsSection } from './components/CertificationsSection';
 import { HowItWorks } from './components/HowItWorks';
 import { BeforeAfterSection } from './components/BeforeAfterSection';
 import { QuoteSection } from './components/QuoteSection';
+import { FaqSection } from './components/FaqSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { BackToTop } from './components/BackToTop';
@@ -124,7 +126,10 @@ export default function App() {
           {/* Why Choose CREWW Section */}
           <WhyChooseSection />
 
-          {/* How It Works Section (Compact 3-step process) */}
+          {/* Certifications & Credentials Section (NADCA Certified trust signal) */}
+          <CertificationsSection />
+
+          {/* How It Works Section (Compact 4-step process) */}
           <HowItWorks />
 
           {/* Before & After Section (Interactive comparison) */}
@@ -138,6 +143,9 @@ export default function App() {
             selectedPropertyType={selectedPropertyType}
             promoApplied={promoApplied}
           />
+
+          {/* Frequently Asked Questions Section */}
+          <FaqSection />
 
           {/* Contact Section (Buttons open Quote and Booking modals) */}
           <ContactSection

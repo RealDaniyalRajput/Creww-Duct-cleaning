@@ -33,10 +33,10 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Brand Info Column */}
           <div className="lg:col-span-4 flex flex-col items-start">
             <a
-              href="#top"
+              href="#home"
               onClick={(e) => {
                 e.preventDefault();
-                scrollTo('#top');
+                scrollTo('#home');
               }}
               className="flex items-center gap-3 mb-3.5 group"
             >
@@ -57,16 +57,16 @@ export const Footer: React.FC<FooterProps> = ({
             </a>
 
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed mb-5 max-w-sm">
-              Professional air duct, dryer vent, HVAC, and chimney cleaning services for residential and commercial properties across the USA.
+              NADCA Certified air duct, dryer vent, HVAC, and chimney cleaning services for residential and commercial properties across the USA.
             </p>
 
             {/* Social Icons */}
             <div className="flex items-center gap-2.5">
               <a
-                href="https://www.instagram.com/creww_duct.cleaning?utm_source=ig_web_button_share_sheet&stkn=ZDNlMz0wMzIxNw=="
+                href="https://www.instagram.com/creww_duct.cleaning"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram"
+                aria-label="Follow CREWW Duct Cleaning on Instagram"
                 className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-pink-400 hover:border-pink-500/50 transition-colors"
               >
                 <Instagram className="w-4 h-4" />
@@ -76,7 +76,7 @@ export const Footer: React.FC<FooterProps> = ({
                 href="https://www.facebook.com/profile.php?id=61591930844966"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook"
+                aria-label="Follow CREWW Duct Cleaning on Facebook"
                 className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-blue-400 hover:border-blue-500/50 transition-colors"
               >
                 <Facebook className="w-4 h-4" />
@@ -119,9 +119,11 @@ export const Footer: React.FC<FooterProps> = ({
             <ul className="space-y-2 text-xs sm:text-sm">
               {[
                 { name: 'Services', href: '#services' },
-                { name: 'About', href: '#about' },
                 { name: 'Residential', href: '#residential' },
                 { name: 'Commercial', href: '#commercial' },
+                { name: 'About', href: '#about' },
+                { name: 'Credentials', href: '#certifications' },
+                { name: 'FAQ', href: '#faq' },
                 { name: 'Contact', href: '#contact' },
               ].map((item) => (
                 <li key={item.name}>

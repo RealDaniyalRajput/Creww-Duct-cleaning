@@ -30,7 +30,7 @@ export const HowItWorks: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-slate-50 dark:bg-slate-900/40 border-b border-slate-200 dark:border-slate-800 transition-colors duration-200">
+    <section id="how-it-works" className="py-16 sm:py-20 lg:py-24 bg-slate-50 dark:bg-slate-900/40 border-b border-slate-200 dark:border-slate-800 transition-colors duration-200 scroll-mt-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -39,7 +39,7 @@ export const HowItWorks: React.FC = () => {
             Simple & Transparent
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-2 mb-4">
-            How It Works
+            How Our Service Works
           </h2>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
             From initial inquiry to completed service, our four-step process is engineered for ease and precision.

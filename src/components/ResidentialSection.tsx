@@ -47,15 +47,15 @@ export const ResidentialSection: React.FC<ResidentialSectionProps> = ({
             <div className="lg:col-span-6 flex flex-col items-start">
               <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-3">
                 <Home className="w-4 h-4" />
-                <span>Homeowner Services</span>
+                <span>Homeowner Solutions</span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
-                Professional Cleaning for Your Home
+                Residential Cleaning Services
               </h2>
 
               <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
-                Your home’s heating, ventilation, laundry, and fireplace systems work continuously throughout every season. CREWW Duct Cleaning brings specialized equipment and respectful, tidy technicians directly to your residence to ensure every air pathway is thoroughly cleaned with zero mess left behind.
+                Your home’s heating, ventilation, laundry exhaust, and fireplace systems work continuously throughout every season. CREWW Duct Cleaning delivers NADCA Certified cleaning standards with specialized rotary equipment, negative-air HEPA containment, and respectful technicians directly to your residence with zero mess left behind.
               </p>
 
               {/* Service Grid */}
@@ -99,7 +99,11 @@ export const ResidentialSection: React.FC<ResidentialSectionProps> = ({
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 bg-slate-900">
                 <img
                   src={residentialDuctImg}
-                  alt="CREWW technician cleaning residential wall return air duct with commercial negative-air vacuum system in modern home"
+                  alt="NADCA certified technician performing residential air duct cleaning with negative-air vacuum system"
+                  loading="lazy"
+                  decoding="async"
+                  width={800}
+                  height={500}
                   referrerPolicy="no-referrer"
                   className="w-full h-auto aspect-[16/10] object-cover object-center"
                 />

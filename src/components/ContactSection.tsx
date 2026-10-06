@@ -20,7 +20,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             Reach Out
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-2 mb-4">
-            Get In Touch
+            Contact CREWW Duct Cleaning
           </h2>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
             Have questions about our service capabilities or need specialized coordination? Connect with our team directly.

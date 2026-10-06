@@ -130,10 +130,10 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({ onBookSe
             Real Transformations
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-2 mb-4">
-            See The Difference
+            Before & After Cleaning Results
           </h2>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
-            A professional cleaning service can make a visible difference. Explore before and after examples of our cleaning work.
+            A professional cleaning service delivers visible results. Explore before and after examples of our NADCA-standard cleaning work.
           </p>
         </div>
 
@@ -201,6 +201,8 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({ onBookSe
             <img
               src={activeComparison.afterImage}
               alt={activeComparison.afterAlt}
+              loading="lazy"
+              decoding="async"
               referrerPolicy="no-referrer"
               className="absolute inset-0 w-full h-full object-cover pointer-events-none"
             />
@@ -218,6 +220,8 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({ onBookSe
               <img
                 src={activeComparison.beforeImage}
                 alt={activeComparison.beforeAlt}
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover max-w-none"
                 style={{
