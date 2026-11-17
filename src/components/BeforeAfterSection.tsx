@@ -1,14 +1,14 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { Wind, Flame, Fan, Layers, Sliders, ArrowLeftRight } from 'lucide-react';
 import { ServiceType } from '../types';
-import airDuctBeforeImg from '../assets/images/air_duct_before_1791049717457.jpg';
-import airDuctAfterImg from '../assets/images/air_duct_after_1791049729790.jpg';
-import dryerVentBeforeImg from '../assets/images/dryer_vent_before_1791049742373.jpg';
-import dryerVentAfterImg from '../assets/images/dryer_vent_after_1791049752417.jpg';
-import hvacCoilBeforeImg from '../assets/images/hvac_coil_before_1791049762628.jpg';
-import hvacCoilAfterImg from '../assets/images/hvac_coil_after_1791049773444.jpg';
-import chimneyBeforeImg from '../assets/images/chimney_before_1791049783371.jpg';
-import chimneyAfterImg from '../assets/images/chimney_after_1791049796143.jpg';
+import airDuctBeforeImg from '../assets/images/creww-air-duct-cleaning-before.webp';
+import airDuctAfterImg from '../assets/images/creww-air-duct-cleaning-after.webp';
+import dryerVentBeforeImg from '../assets/images/creww-dryer-vent-cleaning-before.webp';
+import dryerVentAfterImg from '../assets/images/creww-dryer-vent-cleaning-after.webp';
+import hvacCoilBeforeImg from '../assets/images/creww-hvac-coil-cleaning-before.webp';
+import hvacCoilAfterImg from '../assets/images/creww-hvac-coil-cleaning-after.webp';
+import chimneyBeforeImg from '../assets/images/creww-chimney-flue-cleaning-before.webp';
+import chimneyAfterImg from '../assets/images/creww-chimney-flue-cleaning-after.webp';
 
 interface ComparisonItem {
   id: string;
@@ -120,6 +120,16 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({ onBookSe
     isDragging.current = false;
   };
 
+  const handleSliderKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      setSliderPosition((prev) => Math.max(0, prev - 5));
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      setSliderPosition((prev) => Math.min(100, prev + 5));
+    }
+  };
+
   return (
     <section id="before-after" className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -190,12 +200,19 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({ onBookSe
           {/* Interactive Before / After Slider Container */}
           <div
             ref={containerRef}
+            role="slider"
+            tabIndex={0}
+            aria-label={`Before and after comparison slider for ${activeComparison.title}`}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-valuenow={Math.round(sliderPosition)}
+            onKeyDown={handleSliderKeyDown}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
             onTouchMove={handleTouchMove}
-            className="relative aspect-[16/10] sm:aspect-[16/9] w-full rounded-2xl overflow-hidden select-none cursor-ew-resize border border-slate-300 dark:border-slate-700 bg-slate-950 shadow-inner"
+            className="relative aspect-[16/10] sm:aspect-[16/9] w-full rounded-2xl overflow-hidden select-none cursor-ew-resize border border-slate-300 dark:border-slate-700 bg-slate-950 shadow-inner focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
           >
             {/* AFTER Image (Full background) */}
             <img
@@ -203,7 +220,8 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({ onBookSe
               alt={activeComparison.afterAlt}
               loading="lazy"
               decoding="async"
-              referrerPolicy="no-referrer"
+              width={1200}
+              height={896}
               className="absolute inset-0 w-full h-full object-cover pointer-events-none"
             />
 
@@ -222,7 +240,8 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({ onBookSe
                 alt={activeComparison.beforeAlt}
                 loading="lazy"
                 decoding="async"
-                referrerPolicy="no-referrer"
+                width={1200}
+                height={896}
                 className="absolute inset-0 w-full h-full object-cover max-w-none"
                 style={{
                   width: containerRef.current ? `${containerRef.current.clientWidth}px` : '100%',

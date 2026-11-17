@@ -79,7 +79,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="https://www.instagram.com/creww_duct.cleaning?utm_source=ig_web_button_share_sheet&stkn=ZDNlMz0wMzIxNw=="
+                href="https://www.instagram.com/creww_duct.cleaning/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow CREWW Duct Cleaning on Instagram"

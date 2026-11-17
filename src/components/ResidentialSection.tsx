@@ -1,7 +1,7 @@
 import React from 'react';
 import { Home, ArrowRight, CheckCircle2, Wind, Flame, Fan, Layers } from 'lucide-react';
 import { ServiceType } from '../types';
-import residentialDuctImg from '../assets/images/user_img_residential_duct_1791051375504.jpg';
+import residentialDuctImg from '../assets/images/creww-residential-air-duct-cleaning.webp';
 
 interface ResidentialSectionProps {
   onQuoteClick: () => void;
@@ -15,22 +15,22 @@ export const ResidentialSection: React.FC<ResidentialSectionProps> = ({
   const homeServices = [
     {
       name: 'Air Duct Cleaning' as ServiceType,
-      desc: 'Whole-house supply and return register cleaning to clear household dust buildup.',
+      desc: 'Whole-home air duct cleaning for supply and return registers to clear household dust buildup.',
       icon: Wind,
     },
     {
       name: 'Dryer Vent Cleaning' as ServiceType,
-      desc: 'Complete lint clearing from laundry machines through exterior walls or roof terminations.',
+      desc: 'Residential dryer vent lint removal from laundry machines through exterior wall or roof terminations.',
       icon: Flame,
     },
     {
       name: 'HVAC Cleaning' as ServiceType,
-      desc: 'Precision indoor evaporator coil and blower motor cleaning for home HVAC systems.',
+      desc: 'Precision indoor evaporator coil and blower motor cleaning for residential HVAC systems.',
       icon: Fan,
     },
     {
       name: 'Chimney Cleaning' as ServiceType,
-      desc: 'Fireplace flue sweeping and creosote removal with dedicated dust containment.',
+      desc: 'Residential chimney flue sweeping and creosote removal with sealed hearth dust containment.',
       icon: Layers,
     },
   ];
@@ -55,7 +55,7 @@ export const ResidentialSection: React.FC<ResidentialSectionProps> = ({
               </h2>
 
               <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
-                Your home’s heating, ventilation, laundry exhaust, and fireplace systems work continuously throughout every season. CREWW Duct Cleaning delivers NADCA Certified cleaning standards with specialized rotary equipment, negative-air HEPA containment, and respectful technicians directly to your residence with zero mess left behind.
+                Your home’s heating, ventilation, laundry exhaust, and fireplace systems work continuously throughout every season. CREWW Duct Cleaning provides residential air duct cleaning, home ventilation cleaning services, and HVAC and dryer vent cleaning using NADCA Certified standards, negative-air HEPA containment, and respectful technicians.
               </p>
 
               {/* Service Grid */}
@@ -63,10 +63,11 @@ export const ResidentialSection: React.FC<ResidentialSectionProps> = ({
                 {homeServices.map((svc) => {
                   const Icon = svc.icon;
                   return (
-                    <div
+                    <button
+                      type="button"
                       key={svc.name}
                       onClick={() => onSelectService(svc.name)}
-                      className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800 hover:border-blue-500/60 cursor-pointer transition-all group"
+                      className="text-left w-full p-4 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800 hover:border-blue-500/60 cursor-pointer transition-all group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
                     >
                       <div className="flex items-center gap-2.5 mb-1.5">
                         <div className="p-1.5 rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-colors">
@@ -79,7 +80,7 @@ export const ResidentialSection: React.FC<ResidentialSectionProps> = ({
                       <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                         {svc.desc}
                       </p>
-                    </div>
+                    </button>
                   );
                 })}
               </div>
@@ -99,12 +100,11 @@ export const ResidentialSection: React.FC<ResidentialSectionProps> = ({
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 bg-slate-900">
                 <img
                   src={residentialDuctImg}
-                  alt="NADCA certified technician performing residential air duct cleaning with negative-air vacuum system"
+                  alt="Technician performing residential air duct cleaning and home vent cleaning with negative-air vacuum equipment"
                   loading="lazy"
                   decoding="async"
-                  width={800}
-                  height={500}
-                  referrerPolicy="no-referrer"
+                  width={1376}
+                  height={768}
                   className="w-full h-auto aspect-[16/10] object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none" />

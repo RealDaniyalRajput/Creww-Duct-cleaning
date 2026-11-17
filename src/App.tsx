@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
@@ -16,15 +16,16 @@ import { FaqSection } from './components/FaqSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { BackToTop } from './components/BackToTop';
-import { PromoModal } from './components/PromoModal';
-import { QuoteModal } from './components/QuoteModal';
-import { BookingModal } from './components/BookingModal';
-import { ServiceDetailsModal } from './components/ServiceDetailsModal';
-import { PrivacyPolicyModal } from './components/PrivacyPolicyModal';
-import { TermsModal } from './components/TermsModal';
-import { AskCrewwChatbot } from './components/AskCrewwChatbot';
 import { useFooterDetection } from './hooks/useFooterDetection';
 import { ServiceType, PropertyType } from './types';
+
+const PromoModal = lazy(() => import('./components/PromoModal').then((m) => ({ default: m.PromoModal })));
+const QuoteModal = lazy(() => import('./components/QuoteModal').then((m) => ({ default: m.QuoteModal })));
+const BookingModal = lazy(() => import('./components/BookingModal').then((m) => ({ default: m.BookingModal })));
+const ServiceDetailsModal = lazy(() => import('./components/ServiceDetailsModal').then((m) => ({ default: m.ServiceDetailsModal })));
+const PrivacyPolicyModal = lazy(() => import('./components/PrivacyPolicyModal').then((m) => ({ default: m.PrivacyPolicyModal })));
+const TermsModal = lazy(() => import('./components/TermsModal').then((m) => ({ default: m.TermsModal })));
+const AskCrewwChatbot = lazy(() => import('./components/AskCrewwChatbot').then((m) => ({ default: m.AskCrewwChatbot })));
 
 export default function App() {
   const [selectedService, setSelectedService] = useState<ServiceType>('Air Duct Cleaning');
@@ -169,52 +170,64 @@ export default function App() {
         />
 
         {/* Coordinated Floating Actions Cluster & Ask CREWW Chatbot */}
-        <AskCrewwChatbot
-          onOpenBooking={openBookingModal}
-          onNavigateToQuote={() => openQuoteModal()}
-          onQuoteClick={() => openQuoteModal()}
-          isModalOpen={isAnyModalOpen}
-          isNearFooter={isNearFooter}
-        />
+        <Suspense fallback={null}>
+          <AskCrewwChatbot
+            onOpenBooking={openBookingModal}
+            onNavigateToQuote={() => openQuoteModal()}
+            onQuoteClick={() => openQuoteModal()}
+            isModalOpen={isAnyModalOpen}
+            isNearFooter={isNearFooter}
+          />
 
-        {/* 45% OFF Promotional Modal */}
-        <PromoModal onClaimPromo={handleClaimPromo} />
+          {/* 45% OFF Promotional Modal */}
+          <PromoModal onClaimPromo={handleClaimPromo} />
 
-        {/* Service Details Modal Popup (Clean progressive disclosure) */}
-        <ServiceDetailsModal
-          isOpen={isServiceDetailsOpen}
-          onClose={() => setIsServiceDetailsOpen(false)}
-          serviceId={selectedDetailService}
-          onBookService={openBookingModal}
-        />
+          {/* Service Details Modal Popup (Clean progressive disclosure) */}
+          {isServiceDetailsOpen && (
+            <ServiceDetailsModal
+              isOpen={isServiceDetailsOpen}
+              onClose={() => setIsServiceDetailsOpen(false)}
+              serviceId={selectedDetailService}
+              onBookService={openBookingModal}
+            />
+          )}
 
-        {/* Get Your Free Quote Modal Popup */}
-        <QuoteModal
-          isOpen={isQuoteModalOpen}
-          onClose={() => setIsQuoteModalOpen(false)}
-          initialService={quoteModalService}
-          initialPropertyType={quoteModalPropType}
-          promoApplied={quoteModalPromo}
-        />
+          {/* Get Your Free Quote Modal Popup */}
+          {isQuoteModalOpen && (
+            <QuoteModal
+              isOpen={isQuoteModalOpen}
+              onClose={() => setIsQuoteModalOpen(false)}
+              initialService={quoteModalService}
+              initialPropertyType={quoteModalPropType}
+              promoApplied={quoteModalPromo}
+            />
+          )}
 
-        {/* Book Your Service Modal Popup */}
-        <BookingModal
-          isOpen={isBookingModalOpen}
-          onClose={() => setIsBookingModalOpen(false)}
-          initialService={bookingModalService}
-        />
+          {/* Book Your Service Modal Popup */}
+          {isBookingModalOpen && (
+            <BookingModal
+              isOpen={isBookingModalOpen}
+              onClose={() => setIsBookingModalOpen(false)}
+              initialService={bookingModalService}
+            />
+          )}
 
-        {/* Privacy Policy Modal Overlay */}
-        <PrivacyPolicyModal
-          isOpen={isPrivacyPolicyOpen}
-          onClose={() => setIsPrivacyPolicyOpen(false)}
-        />
+          {/* Privacy Policy Modal Overlay */}
+          {isPrivacyPolicyOpen && (
+            <PrivacyPolicyModal
+              isOpen={isPrivacyPolicyOpen}
+              onClose={() => setIsPrivacyPolicyOpen(false)}
+            />
+          )}
 
-        {/* Terms & Conditions Modal Overlay */}
-        <TermsModal
-          isOpen={isTermsOpen}
-          onClose={() => setIsTermsOpen(false)}
-        />
+          {/* Terms & Conditions Modal Overlay */}
+          {isTermsOpen && (
+            <TermsModal
+              isOpen={isTermsOpen}
+              onClose={() => setIsTermsOpen(false)}
+            />
+          )}
+        </Suspense>
 
       </div>
     </ThemeProvider>

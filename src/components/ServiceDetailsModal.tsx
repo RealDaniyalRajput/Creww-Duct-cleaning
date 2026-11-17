@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { X, CheckCircle2, ArrowRight, ShieldCheck, Wrench, Sparkles, Wind, Flame, Fan, Layers } from 'lucide-react';
 import { ServiceType } from '../types';
-import basementDuctImg from '../assets/images/user_img_basement_duct_1791051389710.jpg';
-import dryerVentImg from '../assets/images/user_img_dryer_vent_1791051405144.jpg';
-import hvacCondenserImg from '../assets/images/user_img_hvac_condenser_1791051415912.jpg';
-import cleanChimneyImg from '../assets/images/clean_chimney_technician_1791051427800.jpg';
-import cleanCommercialImg from '../assets/images/clean_commercial_technician_1791051438169.jpg';
+import basementDuctImg from '../assets/images/creww-air-duct-cleaning-service.webp';
+import dryerVentImg from '../assets/images/creww-dryer-vent-cleaning-service.webp';
+import hvacCondenserImg from '../assets/images/creww-hvac-system-cleaning.webp';
+import cleanChimneyImg from '../assets/images/creww-chimney-cleaning-service.webp';
+import cleanCommercialImg from '../assets/images/creww-commercial-duct-cleaning.webp';
 
 interface ServiceDetailsModalProps {
   isOpen: boolean;
@@ -203,8 +203,11 @@ export const ServiceDetailsModal: React.FC<ServiceDetailsModalProps> = ({
           <div className="relative rounded-2xl overflow-hidden aspect-[16/9] w-full bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-md">
             <img
               src={data.image}
-              alt={data.title}
-              referrerPolicy="no-referrer"
+              alt={`${data.title} service by CREWW DUCT CLEANING`}
+              width={1376}
+              height={768}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />

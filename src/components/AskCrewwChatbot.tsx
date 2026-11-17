@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X, Send, ArrowRight } from 'lucide-react';
 import { ServiceType } from '../types';
-import crewwLogo from '../assets/images/creww_official_logo_1791048839644.jpg';
+import crewwLogo from '../assets/images/creww-duct-cleaning-logo.webp';
 
 interface Message {
   id: string;
@@ -259,8 +259,11 @@ export const AskCrewwChatbot: React.FC<AskCrewwChatbotProps> = ({
             <div className="flex items-center gap-3">
               <img
                 src={crewwLogo}
-                alt="CREWW Logo"
-                referrerPolicy="no-referrer"
+                alt="CREWW DUCT CLEANING assistant logo"
+                width={32}
+                height={32}
+                loading="lazy"
+                decoding="async"
                 className="w-8 h-8 rounded-full object-cover"
               />
               <div>

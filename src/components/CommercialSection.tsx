@@ -1,6 +1,6 @@
 import React from 'react';
 import { Building2, ArrowRight, ShieldCheck, CheckCircle2, Factory, Briefcase, Hotel, Store } from 'lucide-react';
-import cleanCommercialTechImg from '../assets/images/clean_commercial_technician_1791051438169.jpg';
+import cleanCommercialTechImg from '../assets/images/creww-commercial-duct-cleaning.webp';
 
 interface CommercialSectionProps {
   onRequestCommercialQuote: () => void;
@@ -46,7 +46,7 @@ export const CommercialSection: React.FC<CommercialSectionProps> = ({
             Commercial Cleaning Solutions
           </h2>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300">
-            Professional cleaning services for businesses, commercial properties, offices, and facilities.
+            Commercial air duct cleaning, HVAC duct cleaning, and ventilation maintenance for offices, businesses, and properties.
           </p>
         </div>
 
@@ -58,12 +58,11 @@ export const CommercialSection: React.FC<CommercialSectionProps> = ({
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 bg-slate-900">
               <img
                 src={cleanCommercialTechImg}
-                alt="CREWW Duct Cleaning commercial ventilation ductwork cleaning technician inside office building"
+                alt="CREWW Duct Cleaning technician performing commercial air duct cleaning inside a corporate office building"
                 loading="lazy"
                 decoding="async"
-                width={800}
-                height={500}
-                referrerPolicy="no-referrer"
+                width={1376}
+                height={768}
                 className="w-full h-auto aspect-[16/10] object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />

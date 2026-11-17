@@ -4,7 +4,7 @@ import { ServiceType, PropertyType, BookingFormData } from '../types';
 import { submitBooking } from '../services/api';
 import { DatePicker } from './ui/DatePicker';
 import { TimePicker } from './ui/TimePicker';
-import crewwLogo from '../assets/images/creww_official_logo_1791048839644.jpg';
+import crewwLogo from '../assets/images/creww-duct-cleaning-logo.webp';
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -142,8 +142,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({
         <div className="flex items-center gap-3 mb-4">
           <img
             src={crewwLogo}
-            alt="CREWW DUCT CLEANING"
-            referrerPolicy="no-referrer"
+            alt="CREWW DUCT CLEANING logo"
+            width={40}
+            height={40}
+            loading="lazy"
+            decoding="async"
             className="w-10 h-10 rounded-full object-cover"
           />
           <div>

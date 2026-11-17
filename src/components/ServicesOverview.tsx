@@ -1,10 +1,10 @@
 import React from 'react';
 import { Wind, Flame, Fan, Layers, ArrowRight, Info } from 'lucide-react';
 import { ServiceType } from '../types';
-import basementDuctImg from '../assets/images/user_img_basement_duct_1791051389710.jpg';
-import dryerVentImg from '../assets/images/user_img_dryer_vent_1791051405144.jpg';
-import hvacCondenserImg from '../assets/images/user_img_hvac_condenser_1791051415912.jpg';
-import cleanChimneyImg from '../assets/images/clean_chimney_technician_1791051427800.jpg';
+import basementDuctImg from '../assets/images/creww-air-duct-cleaning-service.webp';
+import dryerVentImg from '../assets/images/creww-dryer-vent-cleaning-service.webp';
+import hvacCondenserImg from '../assets/images/creww-hvac-system-cleaning.webp';
+import cleanChimneyImg from '../assets/images/creww-chimney-cleaning-service.webp';
 
 interface ServicesOverviewProps {
   onBookService: (service: ServiceType) => void;
@@ -28,9 +28,9 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({
       id: 'Air Duct Cleaning',
       title: 'Professional Air Duct Cleaning',
       description:
-        'Comprehensive supply and return duct cleaning following NADCA standards using powerful negative-air vacuums and high-speed rotary brush systems to clear accumulated dust and debris.',
+        'Comprehensive residential and commercial HVAC duct cleaning following NADCA standards using negative-air vacuums and motorized rotary brushes to extract dust and debris.',
       image: basementDuctImg,
-      alt: 'NADCA certified professional air duct cleaning service with negative-air agitation',
+      alt: 'Professional residential and commercial air duct cleaning service using negative-air extraction',
       icon: Wind,
       highlights: ['Full Supply & Return Runs', 'Rotary Agitation Equipment', 'Residential & Commercial'],
     },
@@ -38,9 +38,9 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({
       id: 'Dryer Vent Cleaning',
       title: 'Professional Dryer Vent Cleaning',
       description:
-        'Thorough lint extraction and booster vent line clearing from dryer backplate to exterior exhaust termination to restore proper airflow velocity and drying efficiency.',
+        'Thorough dryer vent lint removal and maintenance from the appliance transition hose through the exterior exhaust hood to restore steady airflow and drying efficiency.',
       image: dryerVentImg,
-      alt: 'Professional dryer vent cleaning and combustible lint clog removal service',
+      alt: 'Professional residential dryer vent cleaning and lint removal service',
       icon: Flame,
       highlights: ['Deep Lint & Clog Extraction', 'Airflow Optimization', 'Exhaust Hood Inspection'],
     },
@@ -48,9 +48,9 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({
       id: 'HVAC Cleaning',
       title: 'Professional HVAC Cleaning',
       description:
-        'Detailed cleaning of indoor air handler components including evaporator cooling coils, blower fan assemblies, drain pans, and cabinet surfaces.',
+        'Detailed HVAC system cleaning for indoor air handler components including evaporator cooling coils, blower fan assemblies, drain pans, and cabinet surfaces.',
       image: hvacCondenserImg,
-      alt: 'Professional HVAC cleaning and evaporator coil maintenance service',
+      alt: 'Professional HVAC system cleaning and evaporator coil maintenance service',
       icon: Fan,
       highlights: ['Evaporator Coil Cleaning', 'Blower Motor Decontamination', 'Drain Pan Maintenance'],
     },
@@ -58,9 +58,9 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({
       id: 'Chimney Cleaning',
       title: 'Professional Chimney Cleaning',
       description:
-        'Specialized mechanical flue sweeping, creosote removal, and smoke chamber clearing using dedicated steel sweep rods and HEPA-filtered dust containment.',
+        'Specialized residential chimney cleaning and maintenance featuring mechanical flue sweeping, creosote removal, and HEPA-filtered dust containment.',
       image: cleanChimneyImg,
-      alt: 'Professional chimney cleaning and fireplace flue sweeping with HEPA containment',
+      alt: 'Professional residential chimney cleaning and fireplace flue sweeping with HEPA containment',
       icon: Layers,
       highlights: ['Flue & Chimney Sweep', 'Creosote & Soot Removal', 'Clean Hearth Dust Containment'],
     },
@@ -79,7 +79,7 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({
             Professional Cleaning Services
           </h2>
           <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300">
-            Precision cleaning services engineered for residential and commercial ventilation systems across the USA.
+            Air duct cleaning, dryer vent cleaning, HVAC system cleaning, and chimney maintenance for homes and businesses across the USA.
           </p>
         </div>
 
@@ -99,9 +99,8 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({
                     alt={service.alt}
                     loading="lazy"
                     decoding="async"
-                    width={600}
-                    height={450}
-                    referrerPolicy="no-referrer"
+                    width={1376}
+                    height={768}
                     className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                   />
                   <div className="absolute top-3 left-3 p-2 rounded-xl bg-slate-900/80 backdrop-blur-md border border-slate-700/80 text-blue-400 shadow-sm">

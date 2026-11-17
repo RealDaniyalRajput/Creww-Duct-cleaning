@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, CheckCircle2, ShieldCheck } from 'lucide-react';
-import heroResidentialDuctImg from '../assets/images/user_img_residential_duct_1791051375504.jpg';
+import heroResidentialDuctImg from '../assets/images/creww-residential-air-duct-cleaning.webp';
 
 interface HeroProps {
   onQuoteClick: () => void;
@@ -29,7 +29,7 @@ export const Hero: React.FC<HeroProps> = ({ onQuoteClick, onBookClick }) => {
 
             {/* Supporting Copy */}
             <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mb-8">
-              NADCA Certified air duct, dryer vent, HVAC, and chimney cleaning services for residential and commercial properties across the USA.
+              NADCA Certified residential and commercial air duct cleaning, HVAC duct cleaning, dryer vent lint removal, and chimney cleaning services across the USA.
             </p>
 
             {/* CTA Buttons */}
@@ -76,12 +76,12 @@ export const Hero: React.FC<HeroProps> = ({ onQuoteClick, onBookClick }) => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200/80 dark:border-slate-700/80 bg-slate-900 group">
               <img
                 src={heroResidentialDuctImg}
-                alt="CREWW Duct Cleaning NADCA certified technician operating professional negative-air equipment for residential air duct cleaning"
+                alt="CREWW Duct Cleaning technician operating negative-air vacuum equipment for residential air duct and HVAC duct cleaning"
                 loading="eager"
-                decoding="async"
-                width={800}
-                height={600}
-                referrerPolicy="no-referrer"
+                fetchPriority="high"
+                decoding="sync"
+                width={1376}
+                height={768}
                 className="w-full h-auto aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] object-cover object-center transform group-hover:scale-102 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />

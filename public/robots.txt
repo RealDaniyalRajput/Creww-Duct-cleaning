@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://crewwductcleaning.netlify.app/sitemap.xml
+Sitemap: https://crewwductcleaning.site/sitemap.xml

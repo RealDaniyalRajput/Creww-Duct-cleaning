@@ -1,7 +1,7 @@
 import React from 'react';
 import { Mail, Instagram, Facebook } from 'lucide-react';
 import { ServiceType } from '../types';
-import crewwLogo from '../assets/images/creww_official_logo_1791048839644.jpg';
+import crewwLogo from '../assets/images/creww-duct-cleaning-logo.webp';
 
 interface FooterProps {
   onSelectService: (service: ServiceType) => void;
@@ -42,8 +42,11 @@ export const Footer: React.FC<FooterProps> = ({
             >
               <img
                 src={crewwLogo}
-                alt="CREWW DUCT CLEANING"
-                referrerPolicy="no-referrer"
+                alt="CREWW DUCT CLEANING logo"
+                width={48}
+                height={48}
+                loading="lazy"
+                decoding="async"
                 className="h-12 w-auto object-contain rounded-full transition-transform group-hover:scale-105"
               />
               <div className="flex flex-col">
@@ -63,7 +66,7 @@ export const Footer: React.FC<FooterProps> = ({
             {/* Social Icons */}
             <div className="flex items-center gap-2.5">
               <a
-                href="https://www.instagram.com/creww_duct.cleaning"
+                href="https://www.instagram.com/creww_duct.cleaning/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow CREWW Duct Cleaning on Instagram"
@@ -86,9 +89,9 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Services Column */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-3.5">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-white mb-3.5">
               Services
-            </h4>
+            </h2>
             <ul className="space-y-2 text-xs sm:text-sm">
               {[
                 'Air Duct Cleaning',
@@ -97,15 +100,17 @@ export const Footer: React.FC<FooterProps> = ({
                 'Chimney Cleaning',
               ].map((svc) => (
                 <li key={svc}>
-                  <button
-                    onClick={() => {
+                  <a
+                    href="#services"
+                    onClick={(e) => {
+                      e.preventDefault();
                       onSelectService(svc as ServiceType);
                       scrollTo('#services');
                     }}
-                    className="text-slate-400 hover:text-white transition-colors cursor-pointer text-left"
+                    className="text-slate-400 hover:text-white transition-colors cursor-pointer text-left inline-block"
                   >
                     {svc}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -113,9 +118,9 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Company Column */}
           <div className="lg:col-span-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-3.5">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-white mb-3.5">
               Company
-            </h4>
+            </h2>
             <ul className="space-y-2 text-xs sm:text-sm">
               {[
                 { name: 'Services', href: '#services' },
@@ -144,9 +149,9 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Quick Conversion & Contact Column */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-3.5">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-white mb-3.5">
               Get Started
-            </h4>
+            </h2>
             <ul className="space-y-2 text-xs sm:text-sm mb-4">
               <li>
                 <button
@@ -166,9 +171,9 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
             </ul>
 
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-1.5">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-white mb-1.5">
               Email
-            </h4>
+            </h2>
             <a
               href="mailto:crewwductcleaning@gmail.com"
               className="inline-flex items-center gap-1.5 text-xs text-blue-400 hover:text-blue-300 transition-colors break-all"

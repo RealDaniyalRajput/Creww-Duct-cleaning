@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, Sun, Moon, ArrowRight } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
-import crewwLogo from '../assets/images/creww_official_logo_1791048839644.jpg';
+import crewwLogo from '../assets/images/creww-duct-cleaning-logo.webp';
 
 interface HeaderProps {
   onNavigateToQuote: () => void;
@@ -47,8 +47,11 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <img
                 src={crewwLogo}
-                alt="CREWW DUCT CLEANING"
-                referrerPolicy="no-referrer"
+                alt="CREWW DUCT CLEANING logo"
+                width={64}
+                height={64}
+                loading="eager"
+                decoding="async"
                 className="h-14 sm:h-16 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
               />
               <div className="flex flex-col">
@@ -94,16 +97,17 @@ export const Header: React.FC<HeaderProps> = ({
               )}
             </button>
 
-            <button
-              onClick={() => {
-                const el = document.querySelector('#quote');
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
+            <a
+              href="#quote"
+              onClick={(e) => {
+                e.preventDefault();
+                handleLinkClick('#quote');
               }}
               className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-sm hover:shadow transition-all duration-150 active:scale-[0.98]"
             >
               <span>GET A FREE QUOTE</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
           </div>
 
           {/* Mobile Actions: Theme Toggle + Hamburger Button */}

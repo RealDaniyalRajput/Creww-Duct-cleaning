@@ -22,13 +22,13 @@ export const AboutSection: React.FC = () => {
 
           <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 sm:p-12 shadow-sm space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
             <p>
-              At <strong className="text-slate-900 dark:text-white">CREWW Duct Cleaning</strong>, our focus is simple: provide thorough, honest, and NADCA Certified mechanical cleaning for residential and commercial heating, cooling, ventilation, and chimney systems across the USA.
+              At <strong className="text-slate-900 dark:text-white">CREWW Duct Cleaning</strong>, we operate as a dedicated, NADCA Certified professional duct cleaning company providing thorough mechanical cleaning for residential and commercial heating, cooling, ventilation, and chimney systems across the USA.
             </p>
             <p>
               We approach every property with a customer-focused mindset. From the moment you request a free quote online or book your appointment, we prioritize clear communication, straightforward scheduling, and respect for your property. Our technicians utilize specialized rotary agitation tools, high-capacity negative-air collection vacuums, and clean dust containment practices to complete every job properly without cross-contamination.
             </p>
             <p>
-              Whether clearing residential dryer vent lint, deep cleaning supply and return duct trunk runs, servicing central HVAC evaporator coils, or sweeping fireplace flues, CREWW Duct Cleaning brings the focus, equipment, and NADCA-standard dedication needed to keep systems clean.
+              Whether handling air duct and dryer vent cleaning for homeowners, deep cleaning supply and return duct trunk runs, performing HVAC system cleaning on evaporator coils, or delivering residential chimney cleaning services, CREWW Duct Cleaning brings the focus, equipment, and NADCA-standard care needed to keep systems clean.
             </p>
 
             <div className="pt-6 border-t border-slate-200 dark:border-slate-800 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
